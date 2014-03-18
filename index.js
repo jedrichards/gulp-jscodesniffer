@@ -40,14 +40,13 @@ function plugin (options) {
             }
             file.jscs = {result:result};
 
+            this.jscs.results = this.jscs.results || [];
+            this.jscs.results.push(result);
+            this.jscs.failCount = typeof this.jscs.failCount == 'number' ? this.jscs.failCount : 0;
+            if ( !result.pass ) this.jscs.failCount++;
+            this.jscs.success = typeof this.jscs.success == 'undefined' ? true : this.jscs.success;
+            if ( !result.pass ) this.jscs.success = false;
         }
-
-        this.jscs.results = this.jscs.results || [];
-        this.jscs.results.push(result);
-        this.jscs.failCount = typeof this.jscs.failCount == 'number' ? this.jscs.failCount : 0;
-        if ( !result.pass ) this.jscs.failCount++;
-        this.jscs.success = typeof this.jscs.success == 'undefined' ? true : this.jscs.success;
-        if ( !result.pass ) this.jscs.success = false;
         this.push(file);
         cb();
     });
