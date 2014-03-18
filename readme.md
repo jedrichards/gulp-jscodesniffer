@@ -36,11 +36,9 @@ Rings your terminal bell if any failures occurred.
 
 #### `failer`
 
-By default this Gulp plugin will not fail its task if it encounters style breaches. Add this reporter to emit an error into the stream , fail the task and cause Gulp to exit with a `0`.
+By default this Gulp plugin will not fail its task if it encounters style breaches. Add this reporter to emit an error into the stream and fail the task.
 
 ## Usage
-
-
 
 ```javascript
 var gulp = require('gulp');
@@ -54,4 +52,18 @@ gulp.task('jscs',function () {
             reporters: ['default','beep']
         }));
 });
+```
+
+## Tests
+
+Run the Mocha tests:
+
+```
+npm test
+```
+
+Run this project's gulpfile against its fixtures and `.jscsrc`.
+
+```
+npm run jscs
 ```

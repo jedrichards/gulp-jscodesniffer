@@ -27,10 +27,12 @@ function plugin (options) {
     reporters = processReporters(reporters);
 
     var stream = through.obj(function (file,enc,cb) {
+
         if ( file.isBuffer() ) {
             var src = file.contents.toString();
             var messages = sniffer.getTestResults(src,snifferOptions,rc).getMessages();
             messages = dictionary.translateBulk(messages,true);
+
             var result = {
                 fullPath: file.path,
                 fileName: path.basename(file.path),
@@ -47,6 +49,7 @@ function plugin (options) {
             this.jscs.success = typeof this.jscs.success == 'undefined' ? true : this.jscs.success;
             if ( !result.pass ) this.jscs.success = false;
         }
+        
         this.push(file);
         cb();
     });

@@ -18,23 +18,16 @@ function logSpy (item) {
 }
 
 function resetFiles () {
-    passingFile1 = new gutil.File({
-        path: 'fixtures/passing/QuoteConventions.js'
-    });
-    passingFile1.contents = fs.readFileSync(passingFile1.path);
-    passingFile2 = new gutil.File({
-        path: 'fixtures/passing/VariableNamingConventions.js'
-    });
-    passingFile2.contents = fs.readFileSync(passingFile2.path);
+    passingFile1 = fakeFile('fixtures/passing/QuoteConventions.js');
+    passingFile2 = fakeFile('fixtures/passing/VariableNamingConventions.js');
+    failingFile1 = fakeFile('fixtures/failing/QuoteConventions.js');
+    failingFile2 = fakeFile('fixtures/failing/VariableNamingConventions.js');
+}
 
-    failingFile1 = new gutil.File({
-        path: 'fixtures/failing/QuoteConventions.js'
-    });
-    failingFile1.contents = fs.readFileSync(failingFile1.path);
-    failingFile2 = new gutil.File({
-        path: 'fixtures/failing/VariableNamingConventions.js'
-    });
-    failingFile2.contents = fs.readFileSync(failingFile2.path);
+function fakeFile (path) {
+    var file = new gutil.File({path:path});
+    file.contents = fs.readFileSync(file.path);
+    return file;
 }
 
 describe('gulp-jscs',function () {
