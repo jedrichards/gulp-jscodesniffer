@@ -1,0 +1,158 @@
+{
+    "Indentation": {
+      "allowOnlyTabs": false,
+      "allowOnlySpaces": true,
+      "disallowMixed": true
+    },
+    "LineSpacing": {
+      "allowLineTrailingSpaces": false
+    },
+    "LineLength": {
+      "allowMaxLength": 100,
+      "allowMinLength": 0
+    },
+    "CommaPunctuatorSpacing": {
+      "disallowPrecedingSpaces": true
+    },
+    "SemicolonPunctuatorSpacing": {
+      "disallowPrecedingSpaces": false
+    },
+    "CompoundStatementConventions": {
+      "for": [
+        "IfStatement",
+        "SwitchStatement",
+        "WhileStatement",
+        "DoWhileStatement",
+        "ForStatement",
+        "ForInStatement",
+        "WithStatement",
+        "TryStatement"
+      ],
+      "requireBraces": true,
+      "requireMultipleLines": true
+    },
+    "UnaryExpressionIdentifierSpacing": {
+      "allowTrailingWhitespaces" : 0
+    },
+    "TernaryConditionalPunctuatorsSpacing": {
+      "allowTestTrailingWhitespaces": 1,
+      "allowConsequentPrecedingWhitespaces": 1,
+      "allowConsequentTrailingWhitespaces": 1,
+      "allowAlternatePrecedingWhitespaces": 1,
+      "ifNesting": false
+    },
+    "EmptyConstructsSpacing": {
+      "for": [
+        "ObjectExpression",
+        "ArrayExpression",
+        "CallExpression"
+      ],
+      "allowWhitespaces": false
+    },
+    "ObjectLiteralSpacing": {
+      "allowKeyPrecedingWhitespaces": 0,
+      "allowKeyTrailingWhitespaces": 0,
+      "allowValuePrecedingWhitespaces": 0,
+      "allowValueTrailingWhitespaces": 0
+    },
+    "ArrayLiteralSpacing": {
+      "allowElementPrecedingWhitespaces": 0,
+      "allowElementTrailingWhitespaces": 0,
+      "exceptions": {
+        "singleElement": {
+          "for": [ "Literal" ],
+          "allowElementPrecedingWhitespaces": 0,
+          "allowElementTrailingWhitespaces": 0
+        },
+        "firstElement": {
+          "for": [ "Literal" ],
+          "allowElementPrecedingWhitespaces": 0
+        },
+        "lastElement": {
+          "for": [ "Literal" ],
+          "allowElementTrailingWhitespaces": 0
+        }
+      }
+    },
+    "QuoteConventions": {
+      "allowDoubleQuotes": false,
+      "allowSingleQuotes": true
+    },
+    "VariableNamingConventions": {
+      "allowCase": ["camel"],
+      "allowRepeating": true,
+      "allowNumbers": true
+    },
+    "FunctionNamingConventions": {
+      "allowCase": ["camel","pascal"],
+      "allowRepeating": true,
+      "allowNumbers": true
+    },
+    "NewExpressionCalleeNamingConventions": {
+      "allowCase": [ "pascal" ],
+      "allowRepeating": true,
+      "allowNumbers": true
+    },
+    "ArgumentsSpacing": {
+      "allowArgPrecedingWhitespaces": 0,
+      "allowArgTrailingWhitespaces": 0,
+      "exceptions": {
+        "singleArg" : {
+          "for": [ "FunctionExpression", "ArrayExpression", "ObjectExpression" ],
+          "allowArgPrecedingWhitespaces": 0,
+          "allowArgTrailingWhitespaces": 0
+        },
+        "firstArg": {
+          "for": [ "FunctionExpression" ],
+          "allowArgPrecedingWhitespaces": 0
+        },
+        "lastArg": {
+          "for": [ "FunctionExpression" ],
+          "allowArgTrailingWhitespaces": 0
+        }
+      },
+      "ifNesting": {
+        "allowArgPrecedingWhitespaces": 0,
+        "allowArgTrailingWhitespaces": 0
+      }
+    },
+    "ParametersSpacing": {
+      "allowParamPrecedingWhitespaces": 0,
+      "allowParamTrailingWhitespaces": 0,
+      "exceptions": {
+        "singleParam": {
+          "for": [ "Literal" ],
+          "allowElementPrecedingWhitespaces": 0,
+          "allowElementTrailingWhitespaces": 0
+        },
+        "firstParam": {
+          "for": [ "Literal" ],
+          "allowElementPrecedingWhitespaces": 0
+        },
+        "lastParam": {
+          "for": [ "Literal" ],
+          "allowElementTrailingWhitespaces": 0
+        }
+      }
+    },
+    "ChainedMethodCallsPerLineConventions": {
+      "requireOnePerLineWhenMultilineCaller": true
+    },
+    "ChainedMethodCallsSpacing": {
+      "allowPrecedingPropertyWhitespaces": 0
+    },
+    "OperatorSpacing" : {
+      "allowOperatorPrecedingWhitespaces": 1,
+      "allowOperatorTrailingWhitespaces": 1
+    },
+    "VariableDeclarationPerScopeConventions" : {
+      "disallowMultiplePerBlockScope": false,
+      "requireInTheBeginning": false
+    },
+    "ObjectLiteralConventions": {
+      "requireOnePerLineWhenMultiline": true
+    },
+    "ArrayLiteralConventions": {
+      "requireOnePerLineWhenMultiline": true
+    }
+  }

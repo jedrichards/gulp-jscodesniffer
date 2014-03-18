@@ -1,0 +1,36 @@
+{
+  "name": "gulp-jscodesniffer",
+  "version": "0.0.1",
+  "description": "Gulp plugin for jscodesniffer",
+  "main": "index.js",
+  "keywords": [
+    "gulpplugin",
+    "style guide",
+    "code sniffer",
+    "build",
+    "javascript",
+    "automation"
+  ],
+  "homepage": "http://github.com/jedrichards/gulp-jscodesniffer",
+  "repository": "git://github.com/jedrichards/gulp-jscodesniffer.git",
+  "dependencies": {
+    "gulp-util": "~2.2.14",
+    "through2": "~0.4.1",
+    "jscodesniffer": "~2.1.6",
+    "chalk": "~0.4.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.6",
+    "mocha": "~1.18.2",
+    "should": "~3.1.4"
+  },
+  "scripts": {
+    "jscs": "gulp jscs",
+    "test": "mocha --reporter spec"
+  },
+  "author": "Jed Richards <jed@seisaku.co.uk> (http://seisaku.co.uk/)",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.9.0"
+  }
+}
