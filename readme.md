@@ -6,6 +6,10 @@ From the `jscodesniffer` docs:
 
 > JSCodeSniffer is a node.js application that checks JavaScript code style consistency according to a provided coding style, just like phpcs. One can define a custom coding style by using described below JSON notation or use one of predefined standards.
 
+```
+npm install gulp-jscodesniffer --save-dev
+```
+
 ## Options
 
 ### **`standard`**
